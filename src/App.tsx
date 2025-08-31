@@ -38,13 +38,9 @@ function App() {
 
           {/* Zebra peatonal (lado derecho) */}
           <HorizontalCrosswalk canCross={true} />
-
-          {/* Auto en la calle horizontal */}
-          <Car
-            direction="horizontal"
-            position={{ top: "50%", left: "100px" }}
-          />
         </div>
+        {/* Auto en la calle horizontal */}
+        <Car direction="horizontal" position={{ top: "50%", left: "100px" }} />
 
         {/* Calle vertical */}
         <div className="street vertical">
@@ -58,10 +54,9 @@ function App() {
 
           {/* Zebra peatonal vertical (parte de arriba) */}
           <VerticalCrosswalk canCross={false} />
-
-          {/* Auto en la calle vertical */}
-          <Car direction="vertical" position={{ top: "100px", left: "50%" }} />
         </div>
+        {/* Auto en la calle vertical */}
+        <Car direction="vertical" position={{ top: "100px", left: "50%" }} />
       </div>
     </div>
   );

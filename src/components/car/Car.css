@@ -2,9 +2,9 @@
   position: absolute;
   width: 40px;
   height: 70px;
-  background-color: #1976d2; /* color base */
+  background-color: #1976d2;
   border-radius: 6px;
-  z-index: 3;
+  z-index: 9999; /* aseguramos que todos los autos estén encima */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +32,8 @@
   width: 70px;
   height: 40px;
   flex-direction: row;
+  animation: move-horizontal 6s linear infinite;
+  z-index: 9999; /* refuerzo para que esté siempre encima */
 }
 
 .car.horizontal .car-top,
@@ -43,4 +45,36 @@
 .car.horizontal .car-body {
   width: 40px;
   height: 36px;
+}
+
+/* Auto vertical */
+.car.vertical {
+  animation: move-vertical 6s linear infinite;
+  z-index: 9999; /* refuerzo también aquí */
+}
+
+/* Animación: izquierda → derecha */
+@keyframes move-horizontal {
+  0% {
+    left: 0; /* borde izquierdo */
+    top: 50%;
+  }
+  100% {
+    left: calc(100% - 70px); /* borde derecho */
+    top: 50%;
+  }
+}
+
+/* Animación: abajo → arriba */
+@keyframes move-vertical {
+  0% {
+    top: calc(100% - 70px); /* borde inferior */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    top: 0; /* borde superior */
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
