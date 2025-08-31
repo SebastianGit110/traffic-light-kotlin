@@ -1,0 +1,14 @@
+.pedestrian {
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+.pedestrian.horizontal {
+  top: 50%;       /* Centrado vertical */
+  transform: translateY(-50%);
+}
+
+.pedestrian.vertical {
+  left: 32%;      /* Centrado horizontal */
+  transform: translateX(-50%) rotate(90deg);
+}

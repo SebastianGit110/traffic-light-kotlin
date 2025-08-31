@@ -1,3 +1,5 @@
+import Pedestrian from "../../pedestrian/Pedestrian";
+
 function SimpleCrossWalk() {
   return (
     <>
@@ -5,6 +7,7 @@ function SimpleCrossWalk() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div key={i} className="crosswalk-vertical-line"></div>
         ))}
+        <Pedestrian orientation="vertical" />
       </div>
     </>
   );

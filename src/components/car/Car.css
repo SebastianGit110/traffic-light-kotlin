@@ -1,0 +1,46 @@
+.car {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  background-color: #1976d2; /* color base */
+  border-radius: 6px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Partes del auto */
+.car-top,
+.car-bottom {
+  width: 30px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.car-body {
+  width: 36px;
+  height: 40px;
+  background-color: #2196f3;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+/* Auto horizontal */
+.car.horizontal {
+  width: 70px;
+  height: 40px;
+  flex-direction: row;
+}
+
+.car.horizontal .car-top,
+.car.horizontal .car-bottom {
+  width: 10px;
+  height: 30px;
+}
+
+.car.horizontal .car-body {
+  width: 40px;
+  height: 36px;
+}
