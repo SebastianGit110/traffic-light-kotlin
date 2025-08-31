@@ -1,14 +1,49 @@
 .pedestrian {
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  opacity: 0; /* Comienza invisible */
 }
 
+/* Animación horizontal (cruza de izquierda a derecha) */
 .pedestrian.horizontal {
-  top: 50%;       /* Centrado vertical */
-  transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  animation: walk-horizontal 6s linear infinite;
 }
 
+/* Animación vertical (cruza de arriba hacia abajo) */
 .pedestrian.vertical {
-  left: 32%;      /* Centrado horizontal */
-  transform: translateX(-50%) rotate(90deg);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: walk-vertical 6s linear infinite;
+}
+
+/* Keyframes horizontales */
+@keyframes walk-horizontal {
+  0% {
+    left: -80px;
+    opacity: 1;
+  }
+  90% {
+    left: 60%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Keyframes verticales */
+@keyframes walk-vertical {
+  0% {
+    top: -10px;
+    opacity: 1;
+  }
+  90% {
+    top: 100%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

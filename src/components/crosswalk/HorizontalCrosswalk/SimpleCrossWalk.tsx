@@ -1,16 +1,22 @@
 import Pedestrian from "../../pedestrian/Pedestrian";
 
-function SimpleCrossWalk() {
+interface CrossWalkProps {
+  canCross: boolean;
+}
+
+function CrossWalk({ canCross }: CrossWalkProps) {
   return (
-    <>
-      <div className="crosswalk">
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="crosswalk-line"></div>
+    <div className="crosswalk">
+      {Array.from({ length: 6 }).map((_, i) => (
+        <div key={i} className="crosswalk-line"></div>
+      ))}
+
+      {canCross &&
+        Array.from({ length: 5 }).map((_, i) => (
+          <Pedestrian key={i} orientation="vertical" index={i} />
         ))}
-        <Pedestrian orientation="horizontal" />
-      </div>
-    </>
+    </div>
   );
 }
 
-export default SimpleCrossWalk;
+export default CrossWalk;

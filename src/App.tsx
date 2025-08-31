@@ -4,7 +4,7 @@ import {
   HorizontalCrosswalk,
   TrafficLight,
   VerticalCrosswalk,
-  Car
+  Car,
 } from "./components/index";
 
 const currentTrafficLightState = [
@@ -37,10 +37,13 @@ function App() {
           </div>
 
           {/* Zebra peatonal (lado derecho) */}
-          <HorizontalCrosswalk />
+          <HorizontalCrosswalk canCross={true} />
 
           {/* Auto en la calle horizontal */}
-          <Car direction="horizontal" position={{ top: "50%", left: "100px" }} />
+          <Car
+            direction="horizontal"
+            position={{ top: "50%", left: "100px" }}
+          />
         </div>
 
         {/* Calle vertical */}
@@ -54,7 +57,7 @@ function App() {
           </div>
 
           {/* Zebra peatonal vertical (parte de arriba) */}
-          <VerticalCrosswalk />
+          <VerticalCrosswalk canCross={false} />
 
           {/* Auto en la calle vertical */}
           <Car direction="vertical" position={{ top: "100px", left: "50%" }} />
