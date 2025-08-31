@@ -7,7 +7,7 @@
 /* Contenedor del cruce */
 .intersection-container {
   position: relative;
-  width: 550px;
+  width: 750px;
   height: 550px;
   margin: 0 auto;
   background-color: #eee;
@@ -36,6 +36,44 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
+}
+
+/* Zebra peatonal */
+.crosswalk {
+  position: absolute;
+  top: 50%; /* misma altura de la calle horizontal */
+  left: 230px; /* lado izquierdo */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* espacio entre franjas */
+  padding: 10px;
+}
+
+.crosswalk-line {
+  width: 60px;      /* ancho de cada franja */
+  height: 10px;     /* alto de cada franja */
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Zebra peatonal vertical */
+.crosswalk-vertical {
+  position: absolute;
+  left: 50%; /* misma posición de la calle vertical */
+  bottom: 130px; /* parte de abajo, justo sobre la calle horizontal */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row; /* franjas verticales */
+  gap: 8px;
+  padding: 10px;
+}
+
+.crosswalk-vertical-line {
+  width: 10px;   /* franjas estrechas */
+  height: 60px;  /* más altas */
+  background-color: white;
+  border-radius: 2px;
 }
 
 /* Semáforo horizontal */

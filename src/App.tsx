@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import { TrafficLight } from "./components/index";
+import {
+  HorizontalCrosswalk,
+  TrafficLight,
+  VerticalCrosswalk,
+} from "./components/index";
 
 const currentTrafficLightState = [
   {
@@ -30,6 +34,9 @@ function App() {
               active={currentLight[0].active}
             />
           </div>
+
+          {/* Zebra peatonal (lado derecho) */}
+          <HorizontalCrosswalk />
         </div>
 
         {/* Calle vertical */}
@@ -41,6 +48,9 @@ function App() {
               active={currentLight[1].active}
             />
           </div>
+
+          {/* Zebra peatonal vertical (parte de arriba) */}
+          <VerticalCrosswalk />
         </div>
       </div>
     </div>
