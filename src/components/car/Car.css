@@ -50,7 +50,7 @@
 /* Auto vertical */
 .car.vertical {
   animation: move-vertical 6s linear infinite;
-  z-index: 9999; /* refuerzo también aquí */
+  z-index: 9999;
 }
 
 /* Animación: izquierda → derecha */
